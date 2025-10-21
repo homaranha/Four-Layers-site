@@ -156,12 +156,15 @@
       background:var(--card-bg);
       padding:1.2rem;
       border-radius:12px;
-      border:1px solid #eee
+      border:1px solid var(--brand)
     }
     .hero-card small{
       display:block;
       color:var(--muted);
       margin-bottom:0.6rem
+    }
+    .hero-card small u { 
+      text-decoration: underline var(--brand-dark);
     }
     .hero-card .phone{
       font-weight:800;
@@ -208,8 +211,8 @@
       box-shadow:0 12px 28px rgba(0,0,0,0.08)
     }
     .treatment img{
-      width:110px;
-      height:110px;
+      width:130px;
+      height:130px;
       border-radius:50%;
       object-fit:cover
     }
@@ -238,8 +241,8 @@
       position:relative
     }
     .team-card img{
-      width:110px;
-      height:110px;
+      width:130px;
+      height:130px;
       border-radius:50%;
       object-fit:cover;
       margin:0 auto;

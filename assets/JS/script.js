@@ -74,7 +74,7 @@ const btnOpenContact = qs('#btn-open-contact') // Outro botão que também abre 
 const modalCancel = qs('#modalCancel')         // Botão de cancelar
 const modalForm = qs('#modalForm')             // Formulário dentro do modal
 const modalFeedback = qs('#modalFeedback')     // Mensagem de status (feedback)
-const numwhats = "5541998436600"               // Número de envio do Whatsapp
+const numwhats = "5541999418883"               // Número de envio do Whatsapp
 
 function openModal(){
   modalBackdrop.style.display = 'flex'           // Exibe modal
