@@ -136,7 +136,7 @@ contactForm?.addEventListener('submit', (e)=>{
 
   // Verifica se todos os campos estão preenchidos
   if(!name || !phone || !email || !message){ 
-    feedback.textContent = 'Por favor, preencha todos os campos.'; 
+    feedback.textContent = 'Por favor, preencha todos os campos!'; 
     return 
   }
 

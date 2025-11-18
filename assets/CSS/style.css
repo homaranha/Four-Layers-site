@@ -118,7 +118,7 @@
     /* ===== Hero ===== */
     .hero{
       margin-top:78px; /* header height */
-      background:linear-gradient(180deg, rgba(131,1,1,0.06), transparent 50%), url("assets/imagens/imagem-principal.png") center/cover no-repeat;
+      background:linear-gradient(180deg, rgba(255, 2, 2, 0.06), transparent 50%), url("assets/imagens/imagem-principal.png") center/cover no-repeat;
       min-height:72vh;
       display:flex;
       align-items:center;
