@@ -25,6 +25,7 @@
       -webkit-font-smoothing:antialiased;
       -moz-osx-font-smoothing:grayscale;
       line-height:1.45;
+      overflow-x: hidden;
     }
 
     /* ===== Header / Nav ===== */
@@ -119,7 +120,6 @@
     .carousel {
       position: relative;
       width: 100%;
-      max-width: 100dvw;
       margin: auto;
       overflow: hidden;
       border-radius: 16px;
@@ -334,9 +334,14 @@
       padding:1rem;
       border-radius:12px;
       border-top:5px solid var(--brand);
-      text-align:center
+      text-align:center;
     }
-
+    .imgConquista{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
     /* Footer */
     footer{
       padding:2rem 1rem;
@@ -386,20 +391,6 @@
       color:var(--muted)
     }
 
-    /* Responsividade */
-    @media (max-width:900px){
-      .hero-inner{
-        grid-template-columns:1fr; 
-        padding:1rem
-      }
-      nav.primary{
-        display:none
-      }
-      .mobile-toggle{
-        display:block
-      }
-    }
-
     /* Simple utilities */
     .center{
       display:flex;
@@ -411,4 +402,56 @@
     }
     .mt-1{
       margin-top:0.75rem
+    }
+
+    iframe {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    } 
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 320px;
+      gap: 1rem;
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+
+    /* Mobile */
+    @media (max-width: 600px) {
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+      .textoContato{
+        text-align: center;
+      }
+    }
+
+
+    /* Responsividade */
+    @media (min-width:850px) and (max-width:900px){
+      .hero-inner{
+        grid-template-columns:1fr; 
+        padding:1rem
+      }
+      nav.primary{
+        display:none
+      }
+      .mobile-toggle{
+        display:flex
+      }
+    }
+
+    @media (min-width:450px) and (max-width:849px){
+      .hero-inner{
+        grid-template-columns:1fr; 
+        padding:1rem
+      }
+      nav.primary{
+        display:none
+      }
+      .mobile-toggle{
+        display:flex
+      }
     }
