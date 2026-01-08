@@ -241,7 +241,7 @@ const nextBtn = document.querySelector('.next');
 
 let index = 0;
 let interval;
-const delay = 3000; // 3 segundos
+const delay = 30000; // 3 segundos
 
 function updateCarousel() {
   const width = images[0].clientWidth;

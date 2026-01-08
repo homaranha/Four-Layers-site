@@ -336,11 +336,6 @@
       border-top:5px solid var(--brand);
       text-align:center;
     }
-    .imgConquista{
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
     
     /* Footer */
     footer{
