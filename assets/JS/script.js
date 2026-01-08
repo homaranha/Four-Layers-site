@@ -29,18 +29,30 @@ const sections = navLinks
   .map(link => document.getElementById(link.getAttribute('href').replace('#',''))) // Liga cada link à seção correspondente
   .filter(Boolean) // Remove links inválidos
 
-function onScrollSpy(){
-  const offset = window.scrollY + window.innerHeight * 0.35 // Define área de ativação (um pouco abaixo do topo)
+function onScrollSpy() {
+  const offset = window.scrollY + window.innerHeight * 0.35;
+
+  let currentSectionId = null;
+
   sections.forEach(sec => {
-    const id = sec.id
-    const link = document.querySelector(`.nav-link[href="#${id}"]`)
-    if(!link) return
-    const top = sec.offsetTop
-    const bottom = top + sec.offsetHeight
-    // Adiciona classe "active" se a seção estiver visível
-    if (offset >= top && offset < bottom) link.classList.add('active')
-    else link.classList.remove('active')
-  })
+    const top = sec.offsetTop;
+    const bottom = top + sec.offsetHeight;
+
+    if (offset >= top && offset < bottom) {
+      currentSectionId = sec.id;
+    }
+  });
+
+  // Remove active de todos
+  navLinks.forEach(link => link.classList.remove('active'));
+
+  // Ativa apenas o correto
+  if (currentSectionId) {
+    const activeLink = document.querySelector(
+      `.nav-link[href="#${currentSectionId}"]`
+    );
+    if (activeLink) activeLink.classList.add('active');
+  }
 }
 window.addEventListener('scroll', onScrollSpy, {passive:true})
 window.addEventListener('resize', onScrollSpy)
@@ -216,3 +228,52 @@ qsa('section').forEach(s=>{
   s.style.transition = 'opacity .7s ease'     // Transição suave
   observer.observe(s)                         // Observa quando entra no viewport
 })
+
+
+/* ================================
+   Carrossel
+   ================================ */
+
+const track = document.querySelector('.carousel-track');
+const images = document.querySelectorAll('.carousel-track img');
+const prevBtn = document.querySelector('.prev');
+const nextBtn = document.querySelector('.next');
+
+let index = 0;
+let interval;
+const delay = 3000; // 3 segundos
+
+function updateCarousel() {
+  const width = images[0].clientWidth;
+  track.style.transform = `translateX(-${index * width}px)`;
+}
+
+function startAutoPlay() {
+  interval = setInterval(() => {
+    index = (index + 1) % images.length;
+    updateCarousel();
+  }, delay);
+}
+
+function stopAutoPlay() {
+  clearInterval(interval);
+}
+
+nextBtn.addEventListener('click', () => {
+  stopAutoPlay();
+  index = (index + 1) % images.length;
+  updateCarousel();
+  startAutoPlay();
+});
+
+prevBtn.addEventListener('click', () => {
+  stopAutoPlay();
+  index = (index - 1 + images.length) % images.length;
+  updateCarousel();
+  startAutoPlay();
+});
+
+window.addEventListener('resize', updateCarousel);
+
+// Inicia automaticamente
+startAutoPlay();
