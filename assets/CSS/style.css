@@ -438,7 +438,7 @@
       }
     }
 
-    @media (min-width:450px) and (max-width:849px){
+    @media (max-width:849px){
       .hero-inner{
         grid-template-columns:1fr; 
         padding:1rem
