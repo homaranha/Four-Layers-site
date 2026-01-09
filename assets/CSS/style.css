@@ -367,7 +367,74 @@
       transform:translateY(0%)
     }
     */
-    
+    /* Quem somos */
+    /* ===== Quem Somos ===== */
+
+    .about-wrapper {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+
+    .about-card {
+      background: linear-gradient(
+        0deg,
+        rgba(255,255,255,0.96),
+        rgba(255,255,255,0.9)
+      );
+      border-radius: 16px;
+      padding: 2.5rem 2rem;
+      border: 1px solid #eee;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+
+      display: flex;
+      flex-direction: column;
+      gap: 1.1rem;
+    }
+
+    /* Texto */
+    .about-card p {
+      color: var(--muted);
+      line-height: 1.7;
+      font-size: 1rem;
+    }
+
+    /* Destaque inicial */
+    .about-lead {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--brand);
+    }
+
+    /* Destaque emocional */
+    .about-highlight {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: #111;
+      padding-left: 1rem;
+      border-left: 4px solid var(--brand);
+    }
+
+    /* Assinatura */
+    .about-signature {
+      margin-top: 0.5rem;
+      font-weight: 700;
+      color: var(--brand);
+      text-align: right;
+    }
+
+    /* Mobile */
+    @media (max-width: 768px) {
+      .about-card {
+        padding: 1.5rem;
+      }
+
+      .about-signature {
+        text-align: center;
+      }
+    }
+
+
     /* Vantagens */
     .benefits{
       display:grid;
