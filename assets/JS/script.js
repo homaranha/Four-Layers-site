@@ -24,39 +24,44 @@ mobileToggle?.addEventListener('click', () => {
 /* ================================
    Scroll Spy (destacar item ativo no menu)
    ================================ */
-const navLinks = qsa('.nav-link')  // Todos os links do menu
+const navLinks = qsa('.nav-link');
 const sections = navLinks
-  .map(link => document.getElementById(link.getAttribute('href').replace('#',''))) // Liga cada link à seção correspondente
-  .filter(Boolean) // Remove links inválidos
+  .map(link => {
+    const id = link.getAttribute('href')?.replace('#', '');
+    return document.getElementById(id);
+  })
+  .filter(Boolean);
+
+const HEADER_OFFSET = 120; // altura do header fixo
 
 function onScrollSpy() {
-  const offset = window.scrollY + window.innerHeight * 0.35;
+  let currentSection = null;
+  let minDistance = Infinity;
 
-  let currentSectionId = null;
+  sections.forEach(section => {
+    const rect = section.getBoundingClientRect();
+    const distance = Math.abs(rect.top - HEADER_OFFSET);
 
-  sections.forEach(sec => {
-    const top = sec.offsetTop;
-    const bottom = top + sec.offsetHeight;
-
-    if (offset >= top && offset < bottom) {
-      currentSectionId = sec.id;
+    if (rect.top <= HEADER_OFFSET + 50 && distance < minDistance) {
+      minDistance = distance;
+      currentSection = section;
     }
   });
 
-  // Remove active de todos
   navLinks.forEach(link => link.classList.remove('active'));
 
-  // Ativa apenas o correto
-  if (currentSectionId) {
+  if (currentSection) {
     const activeLink = document.querySelector(
-      `.nav-link[href="#${currentSectionId}"]`
+      `.nav-link[href="#${currentSection.id}"]`
     );
-    if (activeLink) activeLink.classList.add('active');
+    activeLink?.classList.add('active');
   }
 }
-window.addEventListener('scroll', onScrollSpy, {passive:true})
-window.addEventListener('resize', onScrollSpy)
-onScrollSpy() // Executa uma vez ao carregar
+
+window.addEventListener('scroll', onScrollSpy, { passive: true });
+window.addEventListener('resize', onScrollSpy);
+onScrollSpy();
+
 
 
 /* ================================
