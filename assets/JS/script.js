@@ -114,15 +114,14 @@ modalForm?.addEventListener('submit', (e)=>{
   e.preventDefault()
   const name = qs('#mname').value.trim()
   const phone = qs('#mphone').value.trim()
-  const treatment = qs('#mtreatment').value
 
   // Validação básica
-  if(!name || !phone || !treatment){ 
+  if(!name || !phone){ 
     modalFeedback.textContent = 'Preencha todos os campos.'; 
     return 
   }
 
-  const mensagemwhats = `Olá! Meu nome é ${name}, vim pelo site e gostaria de saber mais sobre o tratamento de ${treatment}.`
+  const mensagemwhats = `Olá! Meu nome é ${name}, vim pelo site e gostaria de solicitar uma avaliação.`
   const url = `https://wa.me/${numwhats}?text=${encodeURIComponent(mensagemwhats)}`
 
   modalFeedback.textContent = 'Solicitação enviada com sucesso! Entraremos em contato.'

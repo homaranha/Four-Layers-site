@@ -21,7 +21,7 @@
         <ul class="nav-list" id="navList">
           <li><a href="#home" data-target="home" class="nav-link">Início</a></li>
           <li><a href="#tratamentos" data-target="tratamentos" class="nav-link">Tratamentos</a></li>
-          <li><a href="#equipe" data-target="equipe" class="nav-link">Quem Somos</a></li>
+          <li><a href="#equipe" data-target="equipe" class="nav-link">Diretor Clínico</a></li>
           <li><a href="#vantagens" data-target="vantagens" class="nav-link">Vantagens</a></li>
         </ul>
       </nav>
@@ -69,14 +69,14 @@
       <div class="hero-inner" role="document">
         <div>
           <h1 id="hero-title">Sorriso saudável, vida mais feliz.</h1>
-          <p>Atendimento humanizado, tecnologias modernas e tratamentos personalizados para todas as idades.</p>
+          <p>Na Four Layers Odontologia, acreditamos que um sorriso saudável é construído em camadas: saúde, função, estética e bem-estar. Por isso, oferecemos atendimento humanizado, tecnologia moderna e tratamentos personalizados, com foco em diagnósticos precisos, planejamento seguro e cuidado completo para cada paciente.</p>
           <div class="hero-actions">
             <a href="#tratamentos" class="btn primary">Ver Tratamentos</a>
-            <button class="btn ghost" id="btn-mais-info">Conhecer equipe</button>
+            <button class="btn ghost" id="bttn-mais-info"><a href="#equipe">Quem somos</a></button>
           </div>
 
           <div class="mt-1 small-muted">
-            <strong>Endereço:</strong> R. João Bettega, 107 - 1º andar - Portão, Curitiba - PR <br>
+            <strong>Endereço:</strong> R. João Bettega, 107, Conjunto 12 - Portão, Curitiba - PR - 1º Andar <br>
             <strong>Horário:</strong> Segunda a Sexta — 8h às 18h
           </div>
         </div>
@@ -96,9 +96,16 @@
     <!-- ===== Tratamentos ===== -->
     <section id="tratamentos" aria-labelledby="tratamentos-title">
       <h2 id="tratamentos-title" class="section-title" style="text-align: center;">Tratamentos</h2>
-      <p class="small-muted" style="max-width:var(--max-width);margin:0 auto 1rem;text-align: center;">Oferecemos tratamentos estéticos e restauradores com profissionais experientes.</p>
+      <p class="small-muted" style="max-width:var(--max-width);margin:0 auto 1rem;text-align: center;">Selecionamos alguns dos nossos principais tratamentos. <br>Para qualquer outra necessidade, conte com a nossa expertise para cuidar do seu sorriso de forma completa.</p>
       <br>
       <div class="treatments-grid">
+        <article class="treatment" tabindex="0" data-treatment="AlinhadorInvisivel">
+          <img src="assets/Imagens/alinhadorInvisivel.PNG" alt="AlinhadorInvisivel" loading="lazy">
+          <h3>Alinhador Invisível</h3>
+          <p>Alinhe seus dentes de forma  discreta, rápida, previsível e com segurança.</p>
+          <button class="btn ghost" data-open="treatment" data-title="AlinhadorInvisivel">Saiba mais</button>
+        </article>
+
         <article class="treatment" tabindex="0" data-treatment="Clareamento">
           <img src="assets/Imagens/Clareamento.jpg" alt="Clareamento dental" loading="lazy">
           <h3>Clareamento Dental</h3>
@@ -106,18 +113,25 @@
           <button class="btn ghost" data-open="treatment" data-title="Clareamento">Saiba mais</button>
         </article>
 
+        <article class="treatment" tabindex="0" data-treatment="Facetas">
+          <img src="assets/Imagens/facetas01.PNG" alt="Facetas dentárias" loading="lazy">
+          <h3>Facetas</h3>
+          <p>Melhore a estética dos dentes com facetas em cerâmica ou resina.</p>
+          <button class="btn ghost" data-open="treatment" data-title="Facetas">Saiba mais</button>
+        </article>
+
         <article class="treatment" tabindex="0" data-treatment="Implante">
-          <img src="assets/Imagens/implante.jpeg" alt="Implante" loading="lazy">
+          <img src="assets/Imagens/implante01.PNG" alt="Implante" loading="lazy">
           <h3>Implantes</h3>
           <p>Soluções de alta durabilidade para substituição de dentes perdidos.</p>
           <button class="btn ghost" data-open="treatment" data-title="Implantes">Saiba mais</button>
         </article>
 
-        <article class="treatment" tabindex="0" data-treatment="Facetas">
-          <img src="assets/Imagens/facetas.jpeg" alt="Facetas dentárias" loading="lazy">
-          <h3>Facetas</h3>
-          <p>Melhore a estética dos dentes com facetas em cerâmica ou resina.</p>
-          <button class="btn ghost" data-open="treatment" data-title="Facetas">Saiba mais</button>
+        <article class="treatment" tabindex="0" data-treatment="Protese">
+          <img src="assets/Imagens/Protese.PNG" alt="Protese" loading="lazy">
+          <h3>Prótese</h3>
+          <p>As próteses dentárias devolvem função, estética e segurança ao sorriso, com soluções personalizadas para cada necessidade.</p>
+          <button class="btn ghost" data-open="treatment" data-title="Protese">Saiba mais</button>
         </article>
 
         <article class="treatment" tabindex="0" data-treatment="Limpeza">
@@ -125,46 +139,45 @@
           <h3>Profilaxia / Limpeza</h3>
           <p>Prevenção e manutenção para dentes e gengivas saudáveis.</p>
           <button class="btn ghost" data-open="treatment" data-title="Limpeza">Saiba mais</button>
-        </article>
+        </article>       
       </div>
     </section>
   <br>  
     <!-- ===== Equipe ===== -->
     <section id="equipe" aria-labelledby="equipe-title">
-      <h2 id="equipe-title" class="section-title" style="text-align: center;">Nossa Equipe</h2>
-      <p class="small-muted" style="max-width:var(--max-width);margin:0 auto 1rem;text-align: center;">Profissionais especializados e compromisso com conforto e segurança.</p>
-       <br> 
-      <div class="team-grid">
-        <div class="team-card" tabindex="0">
-          <img src="assets/Imagens/Clareamento.jpg" alt="Evelyn" loading="lazy">
-          <div class="team-name">Evelyn</div>
-          <div class="team-role">Algum titulo</div>
-          <div class="team-bio">Algum texto</div>
-        </div>
+      <h2 id="equipe-title" class="section-title center">
+        Conheça Dr. Edinaldo Gonçalves
+      </h2>
 
-        <div class="team-card" tabindex="0">
-          <img src="assets/Imagens/imagem-tha.jpeg" alt="Thaisa" loading="lazy">
-          <div class="team-name">Thaisa</div>
-          <div class="team-role">Algum titulo</div>
-          <div class="team-bio">Algum texto</div>
-        </div>
+      <div class="team-wrapper">
+        <div class="team-card">
+          <img 
+            src="assets/Imagens/imagem-edina.jpeg" 
+            alt="Dr. Edinaldo Gonçalves"
+            loading="lazy"
+          >
 
-        <div class="team-card" tabindex="0">
-          <img src="assets/Imagens/imagem-fran.jpeg" alt="Franciele" loading="lazy">
-          <div class="team-name">Franciele</div>
-          <div class="team-role">Algum titulo</div>
-          <div class="team-bio">Algum texto</div>
-        </div>
+          <div class="team-content">
+            <p>
+              O Dr. Edinaldo Gonçalves é cirurgião-dentista, formado pela Faculdade Herrero,
+              e responsável técnico da Four Layers Odontologia. Atuou por 30 anos como técnico
+              em prótese, o que lhe proporciona uma visão altamente precisa e estratégica dos
+              tratamentos odontológicos.
+            </p>
 
-        <div class="team-card" tabindex="0">
-          <img src="assets/Imagens/imagem-edina.jpeg" alt="Edinaldo" loading="lazy">
-          <div class="team-name">Edinaldo</div>
-          <div class="team-role">Algum titulo</div>
-          <div class="team-bio">Algum texto</div>
+            <p>
+              Sua atuação é pautada em planejamento personalizado, excelência técnica e
+              atendimento humanizado, sempre focado nas reais necessidades de cada paciente.
+            </p>
+
+            <span class="cro">CRO-PR 32.730</span>
+          </div>
         </div>
       </div>
     </section>
-    <br><br><br>
+    <br><br>
+
+
     <!-- ===== Vantagens ===== -->
     <section id="vantagens" aria-labelledby="vantagens-title">
       <h2 id="vantagens-title" class="section-title" style="text-align: center;">Vantagens da Clínica</h2>
@@ -182,7 +195,7 @@
         <div class="benefit">
           <img src="assets/Imagens/tecnologia.png" alt="" width="140" height="120" loading="lazy">
           <h3>Tecnologia</h3>
-          <p class="small-muted">Equipamentos modernos para diagnóstico e tratamentos mais seguros.</p>
+          <p class="small-muted">Check-up Digital que garante diagnóstico e tratamentos mais precisos e seguros.</p>
         </div>
       </div>
     </section>
@@ -198,7 +211,7 @@
               <input type="text" id="name" name="name" placeholder="Nome completo" required aria-required="true">
             </div>
             <div class="form-row mt-1">
-              <input type="tel" id="phone" name="phone" placeholder="Telefone (ex: (11) 99999-9999)" required>
+              <input type="tel" id="phone" name="phone" placeholder="Telefone (ex: (11) 12345-6789)" required>
             </div>
             <div class="form-row mt-1">
               <input type="email" id="email" name="email" placeholder="E-mail" required>
@@ -215,7 +228,7 @@
 
         <aside style="background:var(--card-bg);padding:1rem;border-radius:12px;border:1px solid #eee;height:fit-content">
           <h4 style="color:var(--brand)">Localização</h4>
-          <p class="small-muted">R. João Bettega, 107 - 1º andar - Portão, Curitiba - PR</p>
+          <p class="small-muted">R. João Bettega, 107, Conjunto 12 - Portão, Curitiba - PR - 1º Andar</p>
           <div style="margin-top:0.8rem">
             <button class="btn ghost" id="openMap">Abrir no mapa</button>
           </div>
@@ -252,15 +265,6 @@
         </div>
         <div class="form-row mt-1">
           <input type="tel" id="mphone" placeholder="Telefone" required>
-        </div>
-        <div class="form-row mt-1">
-          <select id="mtreatment" required>
-            <option value="">Selecione o tratamento</option>
-            <option>Clareamento</option>
-            <option>Implante</option>
-            <option>Facetas</option>
-            <option>Limpeza</option>
-          </select>
         </div>
         <div class="form-row mt-1" style="justify-content:flex-end">
           <button type="button" class="btn ghost" id="modalCancel">Cancelar</button>
